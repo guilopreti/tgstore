@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { useCart } from '../../contexts/CartContext';
 import { formatCurrency } from '../../utils/formatCurrency';
 import { Container, CardBody, Footer, Price } from './styles';
@@ -14,6 +15,9 @@ export default function ProductCard({ product }) {
   const handleAddToCart = (e) => {
     e.stopPropagation();
     addItem(product);
+    toast.success(`${product.name} adicionado ao carrinho!`, {
+      autoClose: 2000,
+    });
   };
 
   return (

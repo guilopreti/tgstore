@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { getProductById } from '../../services/api';
 import { useCart } from '../../contexts/CartContext';
 import { formatCurrency } from '../../utils/formatCurrency';
@@ -41,6 +42,9 @@ export default function ProductDetail() {
 
   const handleAddToCart = () => {
     addItem({ ...product, quantity });
+    toast.success(`${quantity}x ${product.name} adicionado(s) ao carrinho!`, {
+      autoClose: 2000,
+    });
   };
 
   if (error) {
