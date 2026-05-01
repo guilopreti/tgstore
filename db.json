@@ -1,0 +1,107 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Fone Bluetooth Pro",
+      "description": "Fone de ouvido bluetooth com cancelamento de ruído ativo, bateria de 30h e áudio Hi-Fi.",
+      "price": 349.90,
+      "originalPrice": 499.90,
+      "category": "Audio",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+      "stock": 15,
+      "rating": 4.8,
+      "reviews": 128
+    },
+    {
+      "id": 2,
+      "name": "Teclado Mecânico RGB",
+      "description": "Teclado mecânico gamer com switches blue, iluminação RGB customizável e layout ABNT2.",
+      "price": 289.90,
+      "originalPrice": 289.90,
+      "category": "Periféricos",
+      "image": "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400",
+      "stock": 8,
+      "rating": 4.6,
+      "reviews": 87
+    },
+    {
+      "id": 3,
+      "name": "Mouse Sem Fio Ergonômico",
+      "description": "Mouse sem fio com sensor óptico de 1600 DPI, design ergonômico e autonomia de 18 meses.",
+      "price": 149.90,
+      "originalPrice": 199.90,
+      "category": "Periféricos",
+      "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400",
+      "stock": 20,
+      "rating": 4.4,
+      "reviews": 54
+    },
+    {
+      "id": 4,
+      "name": "Monitor 24\" Full HD",
+      "description": "Monitor Full HD 24 polegadas com painel IPS, 75Hz, tempo de resposta 5ms e borda ultrafina.",
+      "price": 899.90,
+      "originalPrice": 1099.90,
+      "category": "Monitores",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400",
+      "stock": 5,
+      "rating": 4.7,
+      "reviews": 203
+    },
+    {
+      "id": 5,
+      "name": "Webcam Full HD 1080p",
+      "description": "Webcam com resolução 1080p, microfone embutido com cancelamento de ruído e autofoco.",
+      "price": 219.90,
+      "originalPrice": 219.90,
+      "category": "Audio",
+      "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400",
+      "stock": 12,
+      "rating": 4.3,
+      "reviews": 41
+    },
+    {
+      "id": 6,
+      "name": "SSD Externo 1TB",
+      "description": "SSD externo portátil de 1TB com interface USB-C 3.2, leitura de até 1050 MB/s.",
+      "price": 479.90,
+      "originalPrice": 599.90,
+      "category": "Armazenamento",
+      "image": "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=400",
+      "stock": 18,
+      "rating": 4.9,
+      "reviews": 312
+    },
+    {
+      "id": 7,
+      "name": "Hub USB-C 7 em 1",
+      "description": "Hub multifunção com HDMI 4K, 3x USB-A, USB-C PD 100W, leitor SD e microSD.",
+      "price": 159.90,
+      "originalPrice": 199.90,
+      "category": "Acessórios",
+      "image": "https://images.unsplash.com/photo-1625721900558-ca8e0f7ec487?w=400",
+      "stock": 25,
+      "rating": 4.5,
+      "reviews": 76
+    },
+    {
+      "id": 8,
+      "name": "Carregador Wireless 15W",
+      "description": "Base de carregamento sem fio com 15W para dispositivos Qi, compatível com Android e iOS.",
+      "price": 89.90,
+      "originalPrice": 120.00,
+      "category": "Acessórios",
+      "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400",
+      "stock": 30,
+      "rating": 4.2,
+      "reviews": 93
+    }
+  ],
+  "categories": [
+    { "id": 1, "name": "Audio" },
+    { "id": 2, "name": "Periféricos" },
+    { "id": 3, "name": "Monitores" },
+    { "id": 4, "name": "Armazenamento" },
+    { "id": 5, "name": "Acessórios" }
+  ]
+}
