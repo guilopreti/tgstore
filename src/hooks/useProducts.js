@@ -8,12 +8,11 @@ export function useProducts(filters = {}) {
 
   useEffect(() => {
     setLoading(true);
-    setError(null);
     getProducts(filters)
       .then(({ data }) => setProducts(data))
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
-  }, [JSON.stringify(filters)]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [JSON.stringify(filters)]);
 
   return { products, loading, error };
 }
