@@ -1,11 +1,24 @@
+import { useState } from 'react';
 import { useProducts } from '../../hooks/useProducts';
 import ProductCard from '../../components/ProductCard';
 import SkeletonCard from '../../components/SkeletonCard';
 import EmptyState from '../../components/EmptyState';
+import Filters from '../../components/Filters';
 import { Container, Grid } from './styles';
 
 export default function Home() {
-  const { products, loading, error } = useProducts();
+  const [filters, setFilters] = useState({
+    'name:contains': '',
+    category: '',
+    _sort: ''
+  });
+
+  // Limpa chaves vazias para não mandar query params não utilizados para a API
+  const activeFilters = Object.fromEntries(
+    Object.entries(filters).filter(([_, v]) => v !== '')
+  );
+
+  const { products, loading, error } = useProducts(activeFilters);
 
   if (error) {
     return (
@@ -21,6 +34,8 @@ export default function Home() {
   return (
     <Container>
       <h1>Nossos Produtos</h1>
+      
+      <Filters filters={filters} setFilters={setFilters} />
 
       {loading ? (
         <Grid>
@@ -37,7 +52,7 @@ export default function Home() {
       ) : (
         <EmptyState 
           title="Nenhum produto encontrado" 
-          description="Não temos produtos disponíveis no momento." 
+          description="Tente ajustar seus filtros para encontrar o que procura." 
         />
       )}
     </Container>
