@@ -10,17 +10,19 @@ function cartReducer(state, action) {
   switch (action.type) {
     case 'ADD_ITEM': {
       const existingItemIndex = state.items.findIndex(item => item.id === action.payload.id);
+      const quantityToAdd = action.payload.quantity || 1;
+      
       if (existingItemIndex >= 0) {
         const newItems = [...state.items];
         newItems[existingItemIndex] = {
           ...newItems[existingItemIndex],
-          quantity: newItems[existingItemIndex].quantity + 1
+          quantity: newItems[existingItemIndex].quantity + quantityToAdd
         };
         return { ...state, items: newItems };
       }
       return {
         ...state,
-        items: [...state.items, { ...action.payload, quantity: 1 }]
+        items: [...state.items, { ...action.payload, quantity: quantityToAdd }]
       };
     }
     case 'REMOVE_ITEM':
