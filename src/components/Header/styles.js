@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const HeaderContainer = styled.header`
+export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,6 +16,11 @@ export const HeaderContainer = styled.header`
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     padding: ${({ theme }) => theme.spacing[3]} ${({ theme }) => theme.spacing[4]};
   }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const Logo = styled(Link)`
@@ -29,11 +34,6 @@ export const Logo = styled(Link)`
   &:hover {
     color: ${({ theme }) => theme.colors.primaryHover};
   }
-`;
-
-export const Nav = styled.nav`
-  display: flex;
-  align-items: center;
 `;
 
 export const CartButton = styled.button`
@@ -52,22 +52,22 @@ export const CartButton = styled.button`
   &:hover {
     background: ${({ theme }) => theme.colors.surfaceAlt};
   }
-`;
 
-export const Badge = styled.span`
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: ${({ theme }) => theme.colors.accent};
-  color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.fontSizes.xs};
-  font-weight: 700;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: ${({ theme }) => theme.radii.full};
-  transform: translate(25%, -25%);
-  border: 2px solid ${({ theme }) => theme.colors.surface};
+  .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.white};
+    font-size: ${({ theme }) => theme.fontSizes.xs};
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: ${({ theme }) => theme.radii.full};
+    transform: translate(25%, -25%);
+    border: 2px solid ${({ theme }) => theme.colors.surface};
+  }
 `;

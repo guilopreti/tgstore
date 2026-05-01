@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useCart } from '../../contexts/CartContext';
 import CartDrawer from '../CartDrawer';
-import { HeaderContainer, Logo, Nav, CartButton, Badge } from './styles';
+import { Container, Logo, CartButton } from './styles';
 
 export default function Header() {
   const { totalItems } = useCart();
@@ -9,10 +9,10 @@ export default function Header() {
 
   return (
     <>
-      <HeaderContainer>
+      <Container>
         <Logo to="/">tgstore</Logo>
         
-        <Nav>
+        <nav>
           <CartButton onClick={() => setIsCartOpen(true)} aria-label="Abrir carrinho">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -29,10 +29,10 @@ export default function Header() {
               <circle cx="20" cy="21" r="1"></circle>
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
-            {totalItems > 0 && <Badge>{totalItems}</Badge>}
+            {totalItems > 0 && <span className="badge">{totalItems}</span>}
           </CartButton>
-        </Nav>
-      </HeaderContainer>
+        </nav>
+      </Container>
       
       <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </>

@@ -12,7 +12,7 @@ export const Overlay = styled.div`
   justify-content: flex-end;
 `;
 
-export const DrawerContainer = styled.aside`
+export const Container = styled.aside`
   width: 100%;
   max-width: 400px;
   background-color: ${({ theme }) => theme.colors.surface};
@@ -22,46 +22,44 @@ export const DrawerContainer = styled.aside`
   display: flex;
   flex-direction: column;
   z-index: 100;
-  
-  /* Animação suave que será aprimorada na Etapa 6 */
   transform: translateX(0);
   transition: transform ${({ theme }) => theme.transitions.default};
-`;
 
-export const DrawerHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: ${({ theme }) => theme.spacing[6]};
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: ${({ theme }) => theme.spacing[6]};
 
-  h2 {
-    margin: 0;
-    font-family: ${({ theme }) => theme.fonts.display};
-    font-size: ${({ theme }) => theme.fontSizes.xl};
-    color: ${({ theme }) => theme.colors.text};
+    h2 {
+      margin: 0;
+      font-family: ${({ theme }) => theme.fonts.display};
+      font-size: ${({ theme }) => theme.fontSizes.xl};
+      color: ${({ theme }) => theme.colors.text};
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      font-size: ${({ theme }) => theme.fontSizes['2xl']};
+      color: ${({ theme }) => theme.colors.textMuted};
+      cursor: pointer;
+      padding: ${({ theme }) => theme.spacing[1]};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color ${({ theme }) => theme.transitions.default};
+
+      &:hover {
+        color: ${({ theme }) => theme.colors.error};
+      }
+    }
   }
-`;
 
-export const CloseButton = styled.button`
-  background: transparent;
-  border: none;
-  font-size: ${({ theme }) => theme.fontSizes['2xl']};
-  color: ${({ theme }) => theme.colors.textMuted};
-  cursor: pointer;
-  padding: ${({ theme }) => theme.spacing[1]};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color ${({ theme }) => theme.transitions.default};
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.error};
+  .empty-message {
+    color: ${({ theme }) => theme.colors.textMuted};
+    font-size: ${({ theme }) => theme.fontSizes.base};
+    text-align: center;
+    margin-top: ${({ theme }) => theme.spacing[8]};
   }
-`;
-
-export const EmptyMessage = styled.p`
-  color: ${({ theme }) => theme.colors.textMuted};
-  font-size: ${({ theme }) => theme.fontSizes.base};
-  text-align: center;
-  margin-top: ${({ theme }) => theme.spacing[8]};
 `;

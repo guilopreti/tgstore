@@ -1,22 +1,22 @@
-import { Overlay, DrawerContainer, DrawerHeader, CloseButton, EmptyMessage } from './styles';
+import { Overlay, Container } from './styles';
 
 export default function CartDrawer({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
     <Overlay onClick={onClose}>
-      <DrawerContainer onClick={(e) => e.stopPropagation()}>
-        <DrawerHeader>
+      <Container onClick={(e) => e.stopPropagation()}>
+        <div className="drawer-header">
           <h2>Carrinho</h2>
-          <CloseButton onClick={onClose} aria-label="Fechar carrinho">
+          <button onClick={onClose} aria-label="Fechar carrinho">
             &times;
-          </CloseButton>
-        </DrawerHeader>
+          </button>
+        </div>
         
-        <EmptyMessage>
+        <p className="empty-message">
           Seu carrinho está vazio no momento.
-        </EmptyMessage>
-      </DrawerContainer>
+        </p>
+      </Container>
     </Overlay>
   );
 }
