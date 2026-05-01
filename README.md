@@ -28,7 +28,7 @@ Tgstore é um e-commerce moderno e responsivo, focado na melhor experiência do 
 ## 🌐 Links
 
 - **Repositório GitHub:** [https://github.com/guilopreti/tgstore](https://github.com/guilopreti/tgstore)
-- **Produção (App Live):** [https://SEU_LINK_AQUI.vercel.app](https://SEU_LINK_AQUI.vercel.app)
+- **Produção (App Live):** [https://tgstore-ten.vercel.app/](https://tgstore-ten.vercel.app/)
 
 ## 💻 Como Rodar o Projeto Localmente
 
